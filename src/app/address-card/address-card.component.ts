@@ -12,6 +12,11 @@ export class AddressCardComponent implements OnInit {
   userVariable: any;
   @Input('appComponentname') appComponentname: string;
   @Input('user') user: User;
+  isCollapsed: boolean = true;
+
+  toggleCollapse(){
+    this.isCollapsed = !this.isCollapsed;
+  }
 
   // This is like a EAGER LOADING 
   constructor() {

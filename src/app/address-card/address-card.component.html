@@ -4,12 +4,17 @@
 <div class="address-card">
   <h1 class="name">{{user.name}}</h1>
   <h2 class="title">{{user.designation}}</h2>
-  <h3 class="address">{{user.address}}</h3>
-  <div class="phone"><p>Phone:</p>
-      <p *ngFor = "let phoneNumber of user.phone">
-          {{phoneNumber}}
-      </p>
-  </div>  
+  <!-- <button (click)="toggleCollase()">Expand/Collapse</button> -->
+  <button *ngIf="isCollapsed" (click)="toggleCollapse()">Expand</button>
+  <button *ngIf="!isCollapsed" (click)="toggleCollapse()">Collapse</button>
+  <div *ngIf="!isCollapsed">
+    <h3 class="address">{{user.address}}</h3>
+    <div class="phone"><p>Phone:</p>
+        <p *ngFor = "let phoneNumber of user.phone">
+            {{phoneNumber}}
+        </p>
+    </div>
+  </div>    
   <!-- <div *ngIf="user.phoneNoElements.length > 0"><p>phoneNoElements:</p>
     <p *ngFor = "let phoneNumber of user.phoneNoElements">
         {{phoneNumber}}
