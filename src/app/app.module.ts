@@ -8,6 +8,7 @@ import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { DateComponent } from './date/date.component';
 import { AddressCardComponent } from './address-card/address-card.component';
 import { ViewModule } from './view/view.module';
+import { TestService } from './test.service';
 
 
 @NgModule({
@@ -17,13 +18,17 @@ import { ViewModule } from './view/view.module';
     DateComponent,
     AddressCardComponent
   ],
+  // imports takes the dependent modules
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ViewModule
   ],
-  providers: [],
+  // Services has to be listed in the providers 
+  providers: [
+    TestService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
