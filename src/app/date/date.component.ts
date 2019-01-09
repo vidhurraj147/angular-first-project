@@ -11,6 +11,7 @@ export class DateComponent implements OnInit {
   message: string = "hello in the date.component";
   todaysDate: string = new Date().toDateString();
   dateTime: string;
+  someNumber: number = 10;
   
   constructor() { 
 
@@ -24,6 +25,11 @@ export class DateComponent implements OnInit {
   }
 
   ngOnInit() {
+    
+  }
+
+  addTwoNumber(a: number, b: number): number{
+    return a + b;
   }
 
 }
