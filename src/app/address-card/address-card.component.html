@@ -1,3 +1,19 @@
 <p>
   address-card works!
 </p>
+<div>
+  <h1>{{user.name}}</h1>
+  <h2>{{user.title}}</h2>
+  <h3>{{user.address}}</h3>
+  <div><p>Phone:</p>
+      <p *ngFor = "let phoneNumber of user.phone">
+          {{phoneNumber}}
+      </p>
+  </div>  
+  <div *ngIf="user.phoneNoElements.length > 0"><p>phoneNoElements:</p>
+    <p *ngFor = "let phoneNumber of user.phoneNoElements">
+        {{phoneNumber}}
+    </p>
+  </div>  
+  <P>UserName from the directive -- {{ user.userName }}</P>
+</div>
