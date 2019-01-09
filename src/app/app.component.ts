@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from './address-card/user.model';
 import { TestService } from './test.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'angular-first-project app.component.ts';
   user: User;
   inputText: string = "Initial Value";
@@ -18,7 +19,7 @@ export class AppComponent {
   //   svc.printToColsole("TestService is passed as constructor parameter");
   // }
 
-  constructor(private svc: TestService){
+  constructor(private svc: TestService, private http: HttpClient){
     this.svc.printToColsole("TestService is passed as constructor parameter");
     this.user = new User();
     this.user.name = "Foo Bar";
@@ -36,4 +37,11 @@ export class AppComponent {
     // let scv = new TestService();
     // scv.printToColsole("ARGUMENT_IS_PROVIDED");
   }
+
+  ngOnInit(){
+    let observable = this.http.get('https://api.github.com/users/koushikkothagal');
+    observable.subscribe((response) => console.log(response));
+  }
+
+
 }
