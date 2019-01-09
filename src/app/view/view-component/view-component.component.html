@@ -3,3 +3,10 @@
 </p>
 Username: <input type="text" [(ngModel)]="userNameSearch">
 <Button (click)="search()">Search</Button>
+<br>
+<div *ngIf="response">
+  <p>Login:: {{response.login}}</p>
+  <p>Public repos:: {{response.public_repos}}</p>
+  <p>Followers:: {{response.followers}}</p>
+  <p>Public Gists:: {{response.public_gists}}</p>
+</div>
