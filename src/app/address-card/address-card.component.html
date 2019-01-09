@@ -1,19 +1,21 @@
 <p>
   address-card works!
 </p>
-<div>
-  <h1>{{user.name}}</h1>
-  <h2>{{user.title}}</h2>
-  <h3>{{user.address}}</h3>
-  <div><p>Phone:</p>
+<div class="address-card">
+  <h1 class="name">{{user.name}}</h1>
+  <h2 class="title">{{user.designation}}</h2>
+  <h3 class="address">{{user.address}}</h3>
+  <div class="phone"><p>Phone:</p>
       <p *ngFor = "let phoneNumber of user.phone">
           {{phoneNumber}}
       </p>
   </div>  
-  <div *ngIf="user.phoneNoElements.length > 0"><p>phoneNoElements:</p>
+  <!-- <div *ngIf="user.phoneNoElements.length > 0"><p>phoneNoElements:</p>
     <p *ngFor = "let phoneNumber of user.phoneNoElements">
         {{phoneNumber}}
     </p>
-  </div>  
+  </div>   -->
   <P>UserName from the directive -- {{ user.userName }}</P>
 </div>
+
+<p class="title">TEST PARA GRAPH APP COMPONENT HTML</p>
