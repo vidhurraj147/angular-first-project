@@ -6,6 +6,9 @@ import { ViewComponentComponent } from './view-component/view-component.componen
   declarations: [ViewComponentComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    ViewComponentComponent
   ]
 })
 export class ViewModule { }
