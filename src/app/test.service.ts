@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class TestService {
 
   printToColsole(arg){
-    console.log("Given argument is "+arg);
+    console.log("Given argument is--> "+arg);
   }
   constructor() { }
 }

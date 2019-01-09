@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { User } from './address-card/user.model';
+import { TestService } from './test.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,14 @@ export class AppComponent {
   user: User;
   inputText: string = "Initial Value";
   
-  constructor(){
+  // I need TestService to access
+  // We provide it as constructor arguments
+  // constructor(svc: TestService){
+  //   svc.printToColsole("TestService is passed as constructor parameter");
+  // }
+
+  constructor(private svc: TestService){
+    this.svc.printToColsole("TestService is passed as constructor parameter");
     this.user = new User();
     this.user.name = "Foo Bar";
     this.user.designation = "Software Developer";
@@ -21,5 +29,11 @@ export class AppComponent {
                 '987-654-85sd2',
                 '741-654-85sd2'
               ]
+
+    // lets say we made a API call from this testService then this approach is not an ideal
+    // services are dependent on other services then this approach is not an ideal
+    // We created a service ans importing it here          
+    // let scv = new TestService();
+    // scv.printToColsole("ARGUMENT_IS_PROVIDED");
   }
 }
