@@ -12,6 +12,7 @@ import { ViewModule } from './view/view.module';
 import { TestService } from './test.service';
 import { HomeComponent } from './home/home.component';
 import { SettingsComponent } from './settings/settings.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { SettingsComponent } from './settings/settings.component';
     DateComponent,
     AddressCardComponent,
     HomeComponent,
-    SettingsComponent
+    SettingsComponent,
+    PageNotFoundComponent
   ],
   // imports takes the dependent modules
   imports: [
