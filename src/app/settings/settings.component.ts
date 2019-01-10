@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsComponent implements OnInit {
 
+  settingsRoute = 
+  [
+    {linkName: 'Profile', url:'profile'},
+    {linkName: 'Contact', url:'contact'}
+  ];
+
   constructor() { }
 
   ngOnInit() {

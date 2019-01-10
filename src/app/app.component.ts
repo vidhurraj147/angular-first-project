@@ -15,6 +15,11 @@ export class AppComponent implements OnInit {
 
   homeRoute = 'home';
   settingsRoute = 'settings';
+
+  routes = [
+    {linkName: 'Home', url: 'home'},
+    {linkName: 'Settings', url: 'settings'},
+  ];
   
   // I need TestService to access
   // We provide it as constructor arguments

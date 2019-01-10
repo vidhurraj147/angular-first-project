@@ -38,6 +38,19 @@ for the profile OR contact child components you mention it in setting and profil
     <p>SETTINGS PAGE<a [routerLink]="settingsRoute">ANGULAR_SETTINGS</a></p>
 </div>
 
+<div>
+    <b> We are dynamically using rotes[] created in the class </b>
+    <p *ngFor="let routeTo of routes">
+      <a [routerLink]="routeTo.url">{{routeTo.linkName}}</a>
+    </p>
+    <br> 
+</div>
+
+    <h4>To put these in one single a reference</h4> 
+    <a *ngFor = "let route of routes" [routerLink]="route.url">{{route.linkName}}</a>
+
+
+
 <!--The content below is only a placeholder and can be replaced.-->
 <!-- <div style="text-align:center">
   <h1>

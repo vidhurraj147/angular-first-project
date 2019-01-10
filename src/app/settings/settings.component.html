@@ -5,5 +5,10 @@
   <router-outlet>
     The profile OR contact child components you mention it in setting and profile HTML pages with "router-outlet"  
   </router-outlet>
+
+  <p *ngFor="let routeTo of settingsRoute">
+    <a [routerLink]="routeTo.url">{{routeTo.linkName}}</a>
+  </p>
+  <br> 
   
 </h1>
