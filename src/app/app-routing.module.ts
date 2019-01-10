@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 // import { Routes, RouterModule } from '@angular/router';
 import { Route, RouterModule } from '@angular/router';
-import { HelloWorldComponent } from './hello-world';
+import { HomeComponent } from './home/home.component';
+import { SettingsComponent } from './settings/settings.component';
+
 
 // const routes: Routes = [];
 const routes: Route[] = [
-  { path: 'home', component: 'HelloWorldComponent' }
+  // { path: '' , component: HomeComponent},
+  { path: '' , redirectTo: '/home', pathMatch: 'full'}, //  pathMatch: 'prefix'
+  { path: 'home', component: HomeComponent },
+  { path: 'settings', component: SettingsComponent },
   // { path: 'view2', component: 'componentName' },
   // { path: 'view3', component: 'componentName' }
 ];
