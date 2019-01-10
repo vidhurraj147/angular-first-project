@@ -11,7 +11,15 @@ const routes: Route[] = [
   // { path: '' , component: HomeComponent},
   { path: '' , redirectTo: '/home', pathMatch: 'full'}, //  pathMatch: 'prefix'
   { path: 'home', component: HomeComponent },
-  { path: 'settings', component: SettingsComponent },
+  // You can do { path: 'settings/profile', component: SettingsComponent },
+  // BUT that doesnt determine it is a setting child. We configured it
+  { 
+    path: 'settings', 
+    component: SettingsComponent, 
+    children: [
+      { path: '/profile', component: ____ }
+    ]
+  },
   { path:'**', component: PageNotFoundComponent }
   // { path: 'view2', component: 'componentName' },
   // { path: 'view3', component: 'componentName' }

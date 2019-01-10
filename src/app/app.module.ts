@@ -13,6 +13,8 @@ import { TestService } from './test.service';
 import { HomeComponent } from './home/home.component';
 import { SettingsComponent } from './settings/settings.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SettingsProfileComponent } from './settings-profile/settings-profile.component';
+import { SettingsContactComponent } from './settings-contact/settings-contact.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AddressCardComponent,
     HomeComponent,
     SettingsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SettingsProfileComponent,
+    SettingsContactComponent
   ],
   // imports takes the dependent modules
   imports: [
