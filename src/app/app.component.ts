@@ -12,6 +12,9 @@ export class AppComponent implements OnInit {
   title = 'angular-first-project app.component.ts';
   user: User;
   inputText: string = "Initial Value";
+
+  homeRoute = 'home';
+  settingsRoute = 'settings';
   
   // I need TestService to access
   // We provide it as constructor arguments
@@ -42,6 +45,8 @@ export class AppComponent implements OnInit {
     let observable = this.http.get('https://api.github.com/users/koushikkothagal');
     observable.subscribe((response) => console.log(response));
   }
+
+
 
 
 }

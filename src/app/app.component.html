@@ -30,7 +30,13 @@ for the profile OR contact child components you mention it in setting and profil
     <b>THIS IS HANDLED BY ANGULAR routerLink directive </b>
     <p>HOME PAGE<a routerLink="/home">ANGULAR_HOME</a></p>
     <p>SETTINGS PAGE<a routerLink="/settings">ANGULAR_SETTINGS</a></p>
-  </div>
+</div>
+
+<div>
+    <b> Other way is using ANGULAR [] look up  </b>
+    <p>HOME PAGE<a [routerLink]="homeRoute">ANGULAR_HOME</a></p>
+    <p>SETTINGS PAGE<a [routerLink]="settingsRoute">ANGULAR_SETTINGS</a></p>
+</div>
 
 <!--The content below is only a placeholder and can be replaced.-->
 <!-- <div style="text-align:center">
