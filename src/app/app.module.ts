@@ -10,6 +10,8 @@ import { DateComponent } from './date/date.component';
 import { AddressCardComponent } from './address-card/address-card.component';
 import { ViewModule } from './view/view.module';
 import { TestService } from './test.service';
+import { HomeComponent } from './home/home.component';
+import { SettingsComponent } from './settings/settings.component';
 
 
 @NgModule({
@@ -17,11 +19,15 @@ import { TestService } from './test.service';
     AppComponent,
     HelloWorldComponent,
     DateComponent,
-    AddressCardComponent
+    AddressCardComponent,
+    HomeComponent,
+    SettingsComponent
   ],
   // imports takes the dependent modules
   imports: [
     BrowserModule,
+    // This is Angular Routhing 
+    // ng new routing-proj --routing  // To enable routing to new project 
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
