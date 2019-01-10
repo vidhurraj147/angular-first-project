@@ -4,6 +4,8 @@ import { Route, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SettingsComponent } from './settings/settings.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SettingsProfileComponent } from './settings-profile/settings-profile.component';
+import { SettingsContactComponent } from './settings-contact/settings-contact.component';
 
 
 // const routes: Routes = [];
@@ -17,7 +19,10 @@ const routes: Route[] = [
     path: 'settings', 
     component: SettingsComponent, 
     children: [
-      { path: '/profile', component: ____ }
+      { path: '', redirectTo: 'profile', pathMatch: 'full'},
+      { path: 'profile', component: SettingsProfileComponent },
+      { path: 'contact', component: SettingsContactComponent },
+      { path: '**', redirectTo: 'profile', pathMatch: 'full'}
     ]
   },
   { path:'**', component: PageNotFoundComponent }
